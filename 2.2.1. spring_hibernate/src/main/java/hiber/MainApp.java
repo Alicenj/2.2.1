@@ -52,7 +52,7 @@ public class MainApp {
 
             String model = "Car3";
             int series = 30;
-            User userWithAuto = carService.getUser(model, series);
+            User userWithAuto = carService.getUserByCar(model, series);
             System.out.println("Выбор юзера по модели автомобиля: " +
                     "\nUser_id = " + userWithAuto.getId() +
                     "\nFirst_name = " + userWithAuto.getFirstName() +
