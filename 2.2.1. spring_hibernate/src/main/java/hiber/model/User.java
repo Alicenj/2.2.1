@@ -29,15 +29,15 @@ public class User {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "car_id")
-    private Car userCar;
+    private Car usersCar;
 
-    public User() {
-    }
+    public User() {}
 
-    public User(String firstName, String lastName, String email) {
+    public User(String firstName, String lastName, String email, Car car) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.usersCar = car;
     }
 
     public Long getId() {
@@ -72,11 +72,11 @@ public class User {
         this.email = email;
     }
 
-    public Car getUserCar() {
-        return userCar;
+    public Car getUsersCar() {
+        return usersCar;
     }
 
-    public void setUserCar(Car userCar) {
-        this.userCar = userCar;
+    public void setUsersCar(Car usersCar) {
+        this.usersCar = usersCar;
     }
 }
